@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STARBOOKS Whiz Bee Competition Mechanics 2025</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap);
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem;
+            background-color: #f9f9f9;
+
+            background-image: url("4495.jpg");
+            /* background-attachment: fixed; */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+
+        h1,
+        h2,
+        h3 {
+            color: #0467ca;
+
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1. 7em;
+        }
+
+        p,
+        li {
+            color: #333;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: .5rem;
+        }
+
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .headerBee {
+            display: flex;
+            place-items: center;
+            flex-direction: column;
+        }
+
+        .headerBee span {
+            color: #007bbd;
+            font-weight: 600;
+        }
+
+        .flex {
+            display: flex;
+            place-items: center;
+            gap: 40px;
+
+        }
+
+
+        .whiz {
+
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+        }
+
+
+        .title {
+            background-color: #afe3ff;
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 7px;
+        }
+
+        .overlay {
+            padding: 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(13px) saturate(180%);
+            -webkit-backdrop-filter: blur(13px) saturate(180%);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .akaya-kanadaka-regular {
+            font-family: "Akaya Kanadaka", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        @media (orientation: portrait) and (max-width: 600px) {
+            body {
+                padding: 15px;
+                font-size: 14px;
+                max-width: 100vw;
+                margin: 0 auto;
+                width: 90%;
+            }
+
+            .headerBee img {
+                width: 100%;
+                height: auto;
+            }
+
+            .headerBee span {
+                font-size: 0.95em;
+                text-align: center;
+                word-break: break-word;
+            }
+
+            .section {
+                margin-bottom: 1rem;
+            }
+
+            .title {
+                font-size: 1em;
+                padding: 4px 6px;
+                text-align: center;
+            }
+
+            ul {
+                padding-left: 14px;
+            }
+
+            .flex {
+                flex-direction: column;
+
+            }
+
+            .whiz {
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                padding: 0 15px;
+                ;
+            }
+
+
+            .overlay {
+
+                padding: 50px 20px;
+
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+
+
+        /* Media Query for smaller devices */
+
+
+        @media (orientation: landscape) and (min-width: 1200px) {
+            body {
+
+                font-size: 16px;
+                margin: 0 auto;
+                max-width: 1120px;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.95);
+
+            }
+
+            .title {
+                font-size: 1.3em;
+                padding: 4px 6px;
+                text-align: left;
+            }
+
+            .flex {
+
+                flex-direction: row;
+            }
+
+            .overlay {
+                padding: 50px;
+            }
+
+            .img-width {
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="headerBee">
+            <img src="Starbooks-Quiz-Bee_300.png" />
+            <br />
+            <span>August 8, 2025 | 8:00 AM to 12:00 NN</span>
+            <span>2025 Regional Science, Technology, and Innovation Week (RSTW)</span>
+            <span>Baguio City</span>
+            <br />
+            <hr style="border: none; border-top: 1px solid #8bc0f5; width: 100%; margin: 16px 0;" />
+        </div>
+        <div class="flex">
+            <div class="whiz ">
+                <img class="animate" src="wait.png" width="200" />
+            </div>
+            <div class="section ">
+                <h2 class="title">Overview</h2>
+                <p>
+                    The STARBOOKS Whiz Bee Competition aims to challenge the mathematical
+                    and scientific knowledge of SHS students from STARBOOKS beneficiary
+                    schools in CAR while fostering camaraderie and critical thinking.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="flex">
+            <div class="section">
+                <h2 class="title">Registration</h2>
+                <ul>
+                    <li>Registration Period: <b>July 10 to July 23, 2025</b></li>
+                    <li>
+                        Participants:<b>Grade 11 and 12 students</b> from STARBOOKS
+                        beneficiary schools in CAR (public and private)
+                    </li>
+                    <li>
+                        The participants’ coach should email the completed Participants’ Registration Form, School’s
+                        Confirmation Form, and Consent Form to
+                        <a href="mailto:starbooks@stii.dost.gov.ph"><b>starbooks@stii.dost.gov.ph</a>
+                        on or before July 23, 2025.</b> A confirmation email will be sent to the coach and participants
+                        once
+                        the
+                        forms are received.
+                    </li>
+                    <li>Participating senior high schools may send up to five (5) representatives who will compete
+                        individually.
+                    </li>
+                </ul>
+            </div>
+            <div class="whiz ">
+                <img style="border: 5px dashed #47ceff; border-radius: 18px; box-shadow: 0 4px 16px #ffe082;"
+                    src="qr.png" width="250" />
+                <span><b>Download Forms</b></span>
+            </div>
+
+        </div>
+        <div class="section">
+            <h2 class="title">Preliminary Round (Elimination)</h2>
+            <ul>
+                <li>The elimination round will be held on <b>July 28, 2025, at 9:00 AM</b> via Zoom.</li>
+                <li>Participants and the coach must be in the same room and join the meeting with one Zoom account,
+                    preferably the coachs account. All participants must be visible in the camera.</li>
+                <li>There will be an orientation on how to access and use the online quiz platform for the elimination.
+                    Questions and clarifications regarding the details discussed will be entertained before the start of
+                    the
+                    elimination round proper. Hence, no further questions will be entertained at the start of the quiz.
+                </li>
+                <li>Participants will receive the link to the online quiz platform through Zoom’s comment box, after the
+                    orientation.</li>
+                <li>The online quiz will consist of <b>30 multiple-choice questions</b> covering topics in Science,
+                    Mathematics, and related subjects. Contestants must complete it within 20 minutes of opening the
+                    website.</li>
+                <li>Participants can take the elimination quiz until <b>11:00 a.m.</b> on<b> July 28, 2025 only.</b>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="title">Technical Requirements</h2>
+            <ul>
+                <li>A device with a camera for a zoom set-up, preferably a coach’s laptop or desktop: This set-up will
+                    ensure that participants do not interact while taking the quiz.</li>
+                <li>To identify the participating schools, Zoom name should be changed to <b>[School Name_No. of
+                        participants].</b></li>
+                <li>Device for students, preferably a laptop or desktop: Students must ensure that no other items aside
+                    from
+                    the laptop will be placed on their desk; bags, devices, tumbler, and other personal belongings must
+                    be
+                    placed at the back portion of the room.</li>
+                <li>Conducive room with stable internet connection and a backup internet source in case of erratic
+                    connection or sudden disconnection.
+                    <ul>
+                        <li>• In case of sudden disconnection in the conduct of the quiz, the coach must immediately
+                            inform
+                            the STARBOOKS Team via Facebook Messenger about the situation and reconnect in the Zoom room
+                            within five (5) minutes. Meanwhile, students are advised to continue answering the quiz. The
+                            coach must also ensure that the students will not be engaged in any form of interaction or
+                            cheating.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="title">Scoring and Elimination</h2>
+            <ul>
+                <li>The <b>50 contestants</b> with the highest scores, based on the accumulated points of correct
+                    answers,
+                    will advance to the semi-final round after verifying the result of the quiz.</li>
+                <li>In case of a tie in the scores, the least time taken for the quiz will be the deciding factor.</li>
+                <li>A leaderboard will be provided with the names and schools of the semi-finalists, who will receive an
+                    official email with details for the semi-final and grand-final rounds.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="title">Semi-Final Round</h2>
+            <ul>
+                <li>The 50 semi-finalists, together with their coaches, will be invited to the face-to-face semi-final
+                    round, which will be held on <b>August 8, 2025, 8:00 AM – 12:00 NN</b> (Venue: TBA) during the
+                    Regional
+                    Science, Technology, Innovation Week celebration in CAR, Baguio City. DOST-STII will cover the
+                    accommodation expenses for students and coaches from August 7-8, 2025, and food during the
+                    competition
+                    on August 8, 2025.</li>
+                <li>During the competition, the 50 contestants will be positioned in their assigned seats. A series of
+                    questions will be asked, and contestants will write their answers on their respective metacards.
+                    <ul>
+                        <li><i>Note: Any contestation or protest from the contestants or their respective coaches must
+                                be
+                                addressed before the quiz master proceeds to the next question. </i></li>
+                    </ul>
+                </li>
+                <li>The contestants will only be given limited time to write their answers on their metacards (i.e., 30s
+                    for
+                    easy; 60s for average; 90s for difficult).</li>
+                <li>The semi-final round consists of 10 questions for every difficulty round with corresponding point:
+                    Easy
+                    (1 point), Average (3 points), Difficult (5 points).</li>
+                <li>At the end of this round, only five (5) contestants with the highest accumulated points will advance
+                    to
+                    the final round.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="title">Final Round</h2>
+            <ul>
+                <li>The five contestants will use the STARBOOKS Whiz Bee podiums located on the stage.</li>
+                <li>Each podium is equipped with a buzzer. Contestants can press the buzzer if they want to answer a
+                    question. Only the first person to press the buzzer will have the opportunity to give their answer.
+                    If
+                    the first person gives an incorrect answer, other players will have the chance to steal after
+                    reading
+                    question.</li>
+                <li>The final round consists of five (5) questions for every difficulty round with corresponding point:
+                    Easy
+                    (1 point), Average (3 points), Difficult (5 points).</li>
+                <li>In case of a tie, there will be five (5) questions reserved for the clincher round still determined
+                    with
+                    difficulty level to vary point distribution.</li>
+                <li>All finalists receive certificates, medals, and prizes</li>
+                <li>All finalists will receive certificates, medals, and exciting prizes sponsored by various STARBOOKS
+                    partners.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="title">Scope of Review</h2>
+            <ul>
+                <li>The pool of questions will be lifted from the topics under Senior Highs science and math-related
+                    subjects, including the STEM Track found in the STARBOOKS online/offline platform.</li>
+            </ul>
+            <span style="display: flex; place-items: center;  flex-direction: row;"><img class="img-width"
+                    src="coverage.png" width="100%"></span>
+        </div>
+
+
+        <div class="section">
+            <h2 class="title">Summary</h2>
+            <div class=" flex">
+                <div>
+                    <ul>
+                        <li><b>Elimination Round:</b> 30 items; multiple choice+</li>
+                        <li>
+                            <b>Semi-Final Round:</b> 30 items (10 items per difficulty level); multiple choice
+                        </li>
+                        <li><b>Final Round:</b> 15 items (5 items per difficulty level); non-multiple choice</li>
+                        <li>
+                            <b>Clincher Round:</b> 5 items (2 easy, 2 average, 1 difficult); non-multiple choice
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li style="list-style: none; margin-left: -20px;"><b>Scoring System:</b></li>
+                        <li><b>Easy:</b> 1 point per correct answer</li>
+                        <li><b>Average:</b> 3 points per correct answer</li>
+                        <li><b>Difficult:</b> 5 points per correct answer</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="title">Prizes</h2>
+        <div class="flex">
+            <div class="section">
+
+                <h3>Students</h3>
+                <ul>
+                    <li><b>Champion:</b> P7,000.00 worth of Gift Certificate, medal</li>
+                    <li><b>2nd Placer:</b> P5,000.00 worth of Gift Certificate, medal</li>
+                    <li><b>3rd Placer:</b> P4,000.00 worth of Gift Certificate, medal</li>
+                    <li><b>4th Placer:</b> P3,000.00 worth of Gift Certificate, medal</li>
+                    <li><b>5th Placer:</b> P2,000.00 worth of Gift Certificate, medal</li>
+                </ul>
+                <h3>Coaches</h3>
+                <ul>
+                    <li><b>Champion:</b> P7,000.00 worth of Gift Certificate</li>
+                    <li><b>2nd Placer:</b> P5,000.00 worth of Gift Certificate</li>
+                    <li><b>3rd Placer:</b> P4,000.00 worth of Gift Certificate</li>
+                    <li><b>4th Placer:</b> P3,000.00 worth of Gift Certificate</li>
+                    <li><b>5th Placer:</b> P2,000.00 worth of Gift Certificate</li>
+                </ul>
+            </div>
+            <div class="whiz">
+                <span>
+                    <span class="akaya-kanadaka-regular"
+                        style="font-size: 30px; line-height: normal; color: #d60092;">Surprise Prizes Also Await the
+                        Winners!</span>
+                </span>
+                <br />
+                <img src="prizes.png" width="100%" />
+
+            </div>
+
+        </div>
+
+        <footer>
+            <p style="text-align: center;">
+                For more information, follow the
+                <a href="https://www.facebook.com/StarbooksPH" target="_blank"><b>DOST STARBOOKS Facebook page</b></a>.
+            </p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
