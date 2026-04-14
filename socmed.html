@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Connect With Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f8ff;
+        --panel: rgba(255, 255, 255, 0.92);
+        --text: #1f2b3a;
+        --muted: #5f6e7a;
+        --border: rgba(31, 43, 58, 0.08);
+        --shadow: 0 28px 80px rgba(31, 43, 58, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", system-ui, sans-serif;
+        background: radial-gradient(
+          circle at top left,
+          #e8f2ff 0%,
+          #fdfcff 44%,
+          #f8f9fb 100%
+        );
+        color: var(--text);
+      }
+
+      .page-shell {
+        position: relative;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 28px 20px 36px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #3c82f6, #66b5ff);
+        border-radius: 28px;
+        padding: 42px 38px;
+        color: #fff;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: -24px;
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.35),
+          transparent 58%
+        );
+        filter: blur(12px);
+      }
+
+      .hero .eyebrow {
+        display: inline-flex;
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        font-size: 0.82rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      .hero h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2.2rem, 3.6vw, 3.6rem);
+        line-height: 1.02;
+        max-width: 980px;
+        text-transform: capitalize;
+      }
+
+      .hero p {
+        margin: 0;
+        max-width: 840px;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        opacity: 0.95;
+      }
+
+      .hero .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
+      }
+
+      .social-grid {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(180px, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 190px;
+        padding: 26px;
+        border-radius: 24px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        text-decoration: none;
+        color: inherit;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.16) 40%,
+          transparent 100%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 38px 95px rgba(31, 43, 58, 0.16);
+      }
+
+      .card:hover::after {
+        opacity: 1;
+      }
+
+      .card .icon-wrap {
+        width: 58px;
+        height: 58px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.65);
+        box-shadow: inset 0 0 0 1px rgba(31, 43, 58, 0.06);
+      }
+
+      .card .icon-wrap i {
+        font-size: 1.35rem;
+      }
+
+      .card .title {
+        margin: 0 0 0.9rem;
+        font-size: 1.16rem;
+        font-weight: 700;
+      }
+
+      .card .desc {
+        margin: 0;
+        color: #fff;
+        line-height: 1.7;
+      }
+
+      .card .cta {
+        margin-top: 24px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: inherit;
+      }
+
+      .card.facebook {
+        background: linear-gradient(135deg, #176be3, #3b93ff);
+        color: #fff;
+      }
+
+      .card.youtube {
+        background: linear-gradient(135deg, #ff302a, #ff7c66);
+        color: #fff;
+      }
+
+      .card.twitter {
+        background: linear-gradient(135deg, #1da1f2, #6aceff);
+        color: #fff;
+      }
+
+      .card.instagram {
+        background: linear-gradient(135deg, #f58529, #dd2a7b 45%, #8f3cc1);
+        color: #fff;
+      }
+
+      .card.tiktok {
+        background: linear-gradient(135deg, #0b0f17, #111827 38%, #25f4ee);
+        color: #fff;
+      }
+
+      .card.facebook .icon-wrap,
+      .card.youtube .icon-wrap,
+      .card.twitter .icon-wrap {
+        background: rgba(255, 255, 255, 0.35);
+      }
+
+      .card.instagram .icon-wrap {
+        background: rgba(255, 255, 255, 0.22);
+      }
+
+      .card.tiktok .icon-wrap {
+        background: rgba(255, 255, 255, 0.22);
+      }
+
+      .bottom-row {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .bottom-row p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 680px;
+      }
+
+      .bottom-row a {
+        color: #1d4ed8;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .bottom-row a:hover {
+        color: #153e8a;
+      }
+
+      @media (max-width: 760px) {
+        .page-shell {
+          padding: 22px 16px 28px;
+        }
+
+        .hero {
+          padding: 30px 24px;
+        }
+
+        .social-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 520px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero .meta {
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .social-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 1020px) {
+        .social-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page-shell">
+      <section class="hero">
+        <div class="eyebrow">STARBOOKS Social Media</div>
+        <h1>Follow our official social media channels</h1>
+        <p>
+          Stay updated on event announcements, photos, and behind-the-scenes
+          stories from the STARBOOKS Whiz Bee community.
+        </p>
+        <div class="meta">
+          <span>Updated for 2025</span>
+          <span>
+            Quick access to Facebook, YouTube, Twitter, Instagram, and TikTok
+          </span>
+        </div>
+      </section>
+
+      <main class="social-grid">
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card facebook"
+        >
+          <div>
+            <div class="icon-wrap"><i class="fab fa-facebook-f"></i></div>
+            <h2 class="title">Facebook</h2>
+            <p class="desc">
+              Join our community page for announcements, event highlights, and
+              STARBOOKS stories.
+            </p>
+          </div>
+          <div class="cta">Open page</div>
+        </a>
+
+        <a
+          href="https://youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card youtube"
+        >
+          <div>
+            <div class="icon-wrap"><i class="fab fa-youtube"></i></div>
+            <h2 class="title">YouTube</h2>
+            <p class="desc">
+              Watch competition recaps, interviews, and featured videos from
+              STARBOOKS activities.
+            </p>
+          </div>
+          <div class="cta">Watch now</div>
+        </a>
+
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card twitter"
+        >
+          <div>
+            <div class="icon-wrap"><i class="fab fa-twitter"></i></div>
+            <h2 class="title">Twitter</h2>
+            <p class="desc">
+              Follow fast updates, live reminders, and quick event
+              announcements.
+            </p>
+          </div>
+          <div class="cta">Tweet with us</div>
+        </a>
+
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card instagram"
+        >
+          <div>
+            <div class="icon-wrap"><i class="fab fa-instagram"></i></div>
+            <h2 class="title">Instagram</h2>
+            <p class="desc">
+              Explore photos, reels, and stories from STARBOOKS participants and
+              events.
+            </p>
+          </div>
+          <div class="cta">View feed</div>
+        </a>
+
+        <a
+          href="https://tiktok.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card tiktok"
+        >
+          <div>
+            <div class="icon-wrap"><i class="fab fa-tiktok"></i></div>
+            <h2 class="title">TikTok</h2>
+            <p class="desc">
+              Catch quick clips, reels, and behind-the-scenes moments from the
+              STARBOOKS Whiz Bee community.
+            </p>
+          </div>
+          <div class="cta">Watch clips</div>
+        </a>
+      </main>
+
+      <div class="bottom-row">
+        <p>
+          Need more information? Visit the main competition page or email
+          STARBOOKS support for schedule and registration details.
+        </p>
+        <a href="index.html">Back to overview</a>
+      </div>
+    </div>
+  </body>
+</html>
