@@ -5,6 +5,13 @@
     <title>STARBOOKS Deployment Officers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- SwiperJS (Carousel Library) -->
     <link
       rel="stylesheet"
@@ -35,16 +42,7 @@
       body {
         margin: 0;
         min-height: 100vh;
-        font-family:
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          Segoe UI,
-          Roboto,
-          Helvetica,
-          Arial,
-          "Apple Color Emoji",
-          "Segoe UI Emoji";
+        font-family: "Inter", system-ui, sans-serif;
         background: radial-gradient(
           circle at top left,
           #e8f2ff 0%,
@@ -54,43 +52,70 @@
         color: var(--text);
       }
 
-      header {
-        text-align: center;
-        padding: 44px 20px 36px;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        color: white;
+      .hero {
         position: relative;
+        background: linear-gradient(135deg, #3c82f6, #66b5ff);
+        border-radius: 28px;
+        padding: 42px 38px;
+        color: #fff;
         overflow: hidden;
+        box-shadow: var(--shadow);
+        border: 1px solid rgba(255, 255, 255, 0.2);
       }
 
-      header::after {
+      .hero::after {
         content: "";
         position: absolute;
-        width: 360px;
-        height: 360px;
-        right: -150px;
-        top: -170px;
+        right: -40px;
+        top: -24px;
+        width: 220px;
+        height: 220px;
         background: radial-gradient(
           circle,
           rgba(255, 255, 255, 0.35),
-          transparent 60%
+          transparent 58%
         );
-        filter: blur(10px);
+        filter: blur(12px);
       }
 
-      header h1 {
-        margin: 0;
-        font-size: clamp(2rem, 3.2vw, 3.2rem);
-        line-height: 1.06;
-        letter-spacing: -0.02em;
+      .hero .eyebrow {
+        display: inline-flex;
+        padding: 0.45rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        font-size: 0.82rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
         position: relative;
         z-index: 1;
       }
 
-      header p {
-        margin: 12px 0 0;
-        opacity: 0.92;
-        font-size: 1.02rem;
+      .hero h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2.2rem, 3.6vw, 3.6rem);
+        line-height: 1.02;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero p {
+        margin: 0;
+        max-width: 720px;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        opacity: 0.95;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.95rem;
         position: relative;
         z-index: 1;
       }
@@ -190,11 +215,32 @@
         background: rgba(37, 99, 235, 0.95);
       }
 
-      @media (max-width: 760px) {
-        header {
-          padding: 34px 16px 28px;
-        }
+      .bottom-row {
+        margin-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
 
+      .bottom-row p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 680px;
+      }
+
+      .bottom-row a {
+        color: #1d4ed8;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .bottom-row a:hover {
+        color: #153e8a;
+      }
+
+      @media (max-width: 760px) {
         .page-shell {
           padding: 18px 16px 28px;
         }
@@ -202,21 +248,33 @@
         .year-section {
           padding: 16px;
         }
+
+        .hero {
+          padding: 30px 24px;
+        }
       }
     </style>
   </head>
 
   <body>
-    <!-- Header -->
-    <header>
-      <h1>STARBOOKS Deployment Officers</h1>
-      <p>Deployment Activities by Year</p>
-    </header>
+    <div class="page-shell">
+      <section class="hero">
+        <div class="eyebrow">STARBOOKS Field Updates</div>
+        <h1>Deployment Officers</h1>
+        <p>
+          Browse photo highlights from deployment activities, trainings, and
+          on-site installations.
+        </p>
+        <div class="meta">
+          <span>Updated for 2025</span>
+          <span>Swipe or use arrows to navigate</span>
+        </div>
+      </section>
 
-    <main class="page-shell">
+      <main>
       <!-- YEAR 2024 -->
       <div class="year-section">
-        <div class="year-title">📅 2024</div>
+        <h2 class="year-title">&#128197; 2024</h2>
 
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -270,7 +328,7 @@
 
       <!-- YEAR 2025 -->
       <div class="year-section">
-        <div class="year-title">📅 2025</div>
+        <h2 class="year-title">&#128197; 2025</h2>
 
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -307,7 +365,13 @@
           <div class="swiper-pagination" aria-hidden="true"></div>
         </div>
       </div>
-    </main>
+      </main>
+
+      <div class="bottom-row">
+        <p>Need more information? Visit the main competition page for details.</p>
+        <a href="index.html">Back to overview</a>
+      </div>
+    </div>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
