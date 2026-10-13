@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The STARBOOKS Whiz Bee Competition aims to challenge the mathematical and scientific knowledge of SHS students from STARBOOKS beneficiary schools in General Santos City while fostering camaraderie and critical thinking.">
+    <meta name="description"
+        content="The STARBOOKS Whiz Bee Competition aims to challenge the mathematical and scientific knowledge of SHS students from STARBOOKS beneficiary schools in General Santos City while fostering camaraderie and critical thinking.">
     <title>STARBOOKS Whiz Bee Competition Mechanics 2026</title>
     <link rel="icon" type="image/x-icon" href="assets/wait.png">
     <style>
@@ -42,8 +42,8 @@
             position: fixed;
             inset: 0;
             z-index: -1;
-       
-                 }
+
+        }
 
         body::after {
             content: "";
@@ -53,7 +53,7 @@
             pointer-events: none;
             opacity: 0.55;
             filter: blur(12px);
-                 }
+        }
 
 
         h1,
@@ -152,8 +152,6 @@
 
         }
 
-
-
         .whiz {
 
             width: 50%;
@@ -165,8 +163,7 @@
 
         .rewards-visual {
             width: 100%;
-            max-width: 760px;
-            margin: 32px auto 0;
+            max-width: 450px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -175,10 +172,132 @@
 
         .rewards-visual img {
             width: 100%;
-            max-width: 680px;
+            max-width: 450px;
             margin-top: 14px;
             border-radius: 18px;
-            box-shadow: 0 14px 30px rgba(18, 54, 91, 0.2);
+
+        }
+
+        /* Prizes: two-column row (list + rewards visual) */
+        .prize-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 32px;
+        }
+
+        .prize-col {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .prize-visual-col {
+            flex: 0 0 40%;
+            min-width: 0;
+            align-self: center;
+        }
+
+        .prize-visual-col .rewards-visual {
+            margin-top: 0;
+        }
+
+        /* Prizes: individual prize cards */
+        .prize-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 4px;
+        }
+
+        .prize-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 13px 16px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(65, 154, 255, 0.30);
+            box-shadow: 0 8px 18px rgba(18, 54, 91, 0.08);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .prize-item+.prize-item {
+            margin-top: 11px;
+        }
+
+        .prize-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(18, 54, 91, 0.14);
+        }
+
+        .prize-rank {
+            flex: 0 0 auto;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            line-height: 1;
+            background: linear-gradient(135deg, #4aa3e8, #0467ca);
+            box-shadow: 0 6px 14px rgba(4, 103, 202, 0.30);
+        }
+
+        .prize-rank.gold {
+            background: linear-gradient(135deg, #ffdc7a, #ef9f00);
+            box-shadow: 0 6px 14px rgba(239, 159, 0, 0.34);
+        }
+
+        .prize-rank.silver {
+            background: linear-gradient(135deg, #e4eaf1, #9dafc2);
+            box-shadow: 0 6px 14px rgba(120, 140, 165, 0.32);
+        }
+
+        .prize-rank.bronze {
+            background: linear-gradient(135deg, #eeb98f, #ac6527);
+            box-shadow: 0 6px 14px rgba(172, 101, 39, 0.32);
+        }
+
+        .prize-rank.plain {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .prize-body {
+            min-width: 0;
+            padding-top: 1px;
+        }
+
+        .prize-label {
+            color: var(--brand-deep);
+            font-weight: 800;
+            letter-spacing: 0.01em;
+            margin-bottom: 5px;
+        }
+
+        .prize-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 0.97rem;
+            line-height: 1.5;
+            color: var(--ink);
+        }
+
+        .prize-line+.prize-line {
+            margin-top: 5px;
+        }
+
+        .prize-icon {
+            flex: 0 0 auto;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .prize-sponsor {
+            color: var(--brand-deep);
+            font-weight: 900;
+
         }
 
         .overview-row {
@@ -258,10 +377,11 @@
         .headerBee img {
             filter: drop-shadow(0 18px 28px rgba(4, 103, 202, 0.18));
         }
+
         .event-details {
             display: flex;
             flex-direction: column;
-            
+
         }
 
         a {
@@ -273,7 +393,7 @@
         }
 
         .blue-section {
-            background: linear-gradient(135deg, #143c91,#154eca,  #59f773);
+            background: linear-gradient(135deg, #143c91, #154eca, #59f773);
             /* border: 1px solid rgba(15, 139, 215, 0.12); */
             display: flex;
             flex-direction: row;
@@ -341,6 +461,7 @@
                 padding: 18px;
 
             }
+
             .blue-section {
                 flex-direction: column;
                 gap: 12px;
@@ -349,6 +470,27 @@
 
             .section {
                 padding: 16px;
+            }
+
+            .prize-row {
+                flex-direction: column;
+                gap: 22px;
+            }
+
+            .prize-visual-col {
+                flex: 1 1 auto;
+                width: 100%;
+            }
+
+            .prize-rank {
+                width: 40px;
+                height: 40px;
+                font-size: 1.15rem;
+            }
+
+            .prize-item {
+                padding: 11px 13px;
+                gap: 12px;
             }
 
             footer {
@@ -397,11 +539,11 @@
         <div class="headerBee">
             <img src="assets/Starbooks-Quiz-Bee_300-gensan.png" />
             <br />
-       <div class="event-details">
-             <span>November 28, 2026 | 9:00 AM to 12:00 NN</span>
-            <span>2026 National Science, Technology, and Innovation Week (NSTW)</span>
-            <span>Region XII Edition</span>
-       </div>
+            <div class="event-details">
+                <span>November 28, 2026 | 9:00 AM to 12:00 NN</span>
+                <span>2026 National Science, Technology, and Innovation Week (NSTW)</span>
+                <span>Region XII Edition</span>
+            </div>
             <!-- <br /> -->
             <hr style="border: none; border-top: 1px solid #8bc0f5; width: 100%; " />
         </div>
@@ -450,7 +592,11 @@
                 <div class="whiz ">
                     <img style="border: 5px dashed #47ceff; border-radius: 18px; box-shadow: 0 4px 16px #002b79;"
                         src="assets/qr.png" width="350" />
-                    <span style="font-size: .7em; color:#333; margin-top: 15px; background-color: #fff; padding: 2px 14px; border-radius: 12px;">🔽 <b> <a target="_blank" style="text-decoration: none;" href="https://docs.google.com/document/d/1gMcmdVSTRv8qbay-mF-FtGU6fBqpxZlt/edit">Download Forms</a></b></span>
+                    <span
+                        style="font-size: .7em; color:#333; margin-top: 15px; background-color: #fff; padding: 2px 14px; border-radius: 12px;">🔽
+                        <b> <a target="_blank" style="text-decoration: none;"
+                                href="https://docs.google.com/document/d/1gMcmdVSTRv8qbay-mF-FtGU6fBqpxZlt/edit">Download
+                                Forms</a></b></span>
                 </div>
             </div>
         </div>
@@ -521,7 +667,7 @@
         <ul>
             <li>The 50 semi-finalists, together with their coaches, will be invited to the face-to-face semi-final and
                 final rounds, which will be held on <b>November 28, 2026, 9:00 AM</b> at <b>Cinema 3, Gaisano Mall,
-                General Santos City</b>.</li>
+                    General Santos City</b>.</li>
             <li>Food will be provided during the competition.</li>
             <li>During the competition, the 50 contestants will be positioned in their assigned seats. A series of
                 questions will be asked, and contestants will write their answers on their respective metacards.
@@ -592,49 +738,176 @@
 
     </div>
 
-    
     <div class="section">
         <h2 class="title">Prizes</h2>
 
         <p>Top 5 contestants will each receive a medal, special tokens from Felta Multi-Media, Inc., Erovoutika
             Robotics &amp; Automation Solutions, and these exciting prizes:</p>
-        <h3>Students</h3>
-        <ul>
-            <li><b>Champion:</b> P5,000.00 worth of Gift Certificates + P1,000.00 cash from C&amp;E Adaptive
-                Learning Solutions; 1 set Honor Pad X8b with Bluetooth Keyboard from Cerebro Solutions, Inc.</li>
-            <li><b>2nd Placer:</b> P4,000.00 worth of Gift Certificates + P1,000.00 cash from C&amp;E Adaptive
-                Learning Solutions; 1 Samsung Mobile Phone from Revlv Solutions, Inc.</li>
-            <li><b>3rd Placer:</b> P3,000.00 worth of Gift Certificates + P1,000.00 cash from C&amp;E Adaptive
-                Learning Solutions; Redmi Watch 5 Active from Cerebro Solutions, Inc.</li>
-            <li><b>4th Placer:</b> P2,000.00 worth of Gift Certificates + P1,000.00 cash from C&amp;E Adaptive
-                Learning Solutions; Redmi Watch 5 Active from Cerebro Solutions, Inc.</li>
-            <li><b>5th Placer:</b> P1,000.00 worth of Gift Certificates + P1,000.00 cash from C&amp;E Adaptive
-                Learning Solutions</li>
-        </ul>
-        <div style="margin-top: 20px;">
-            <div>
-                <h3>Coaches</h3>
-                <ul>
-                    <li><b>Champion:</b> P5,000.00 worth of Gift Certificates</li>
-                    <li><b>2nd Placer:</b> P4,000.00 worth of Gift Certificates</li>
-                    <li><b>3rd Placer:</b> P3,000.00 worth of Gift Certificates</li>
-                    <li><b>4th Placer:</b> P2,000.00 worth of Gift Certificates</li>
-                    <li><b>5th Placer:</b> P1,000.00 worth of Gift Certificates</li>
-                </ul>
-            </div>
+    </div>
 
-            <div class="rewards-visual">
-                <span>
-                    <span class="akaya-kanadaka-regular"
-                        style="font-size: 30px; line-height: normal; color: #d60092;">Surprise prizes await the
-                        Winners!</span>
-                </span>
-                <img src="assets/combined-rewards.png" width="100%" />
-
-            </div>
+    <div class="section prize-row">
+        <div class="prize-col">
+            <h3 class="title">Students</h3>
+            <ul class="prize-list">
+                <li class="prize-item">
+                    <span class="prize-rank gold">🥇</span>
+                    <div class="prize-body">
+                        <div class="prize-label">Champion</div>
+                        <div class="prize-line">
+                            <span class="prize-icon">💻</span>
+                            <span>1 set <span style="font-weight: bold;">Honor Pad X8b with Bluetooth Keyboard</span>
+                                from
+                                <span class="prize-sponsor">Cerebro Solutions, Inc.</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">💵</span>
+                            <span>P1,000.00 cash from
+                                <span class="prize-sponsor">C&amp;E Adaptive Learning Solutions</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">🎁</span>
+                            <span>P5,000.00 worth of Gift Certificates</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="prize-item">
+                    <span class="prize-rank silver">🥈</span>
+                    <div class="prize-body">
+                        <div class="prize-label">2nd Placer</div>
+                        <div class="prize-line">
+                            <span class="prize-icon">📱</span>
+                            <span>1 <span style="font-weight: bold;">Samsung Mobile Phone</span> from
+                                <span class="prize-sponsor">Revlv Solutions, Inc.</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">💵</span>
+                            <span>P1,000.00 cash from
+                                <span class="prize-sponsor">C&amp;E Adaptive Learning Solutions</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">🎁</span>
+                            <span>P4,000.00 worth of Gift Certificates</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="prize-item">
+                    <span class="prize-rank bronze">🥉</span>
+                    <div class="prize-body">
+                        <div class="prize-label">3rd Placer</div>
+                        <div class="prize-line">
+                            <span class="prize-icon">⌚</span>
+                            <span><span style="font-weight: bold;">Redmi Watch 5 Active</span> from
+                                <span class="prize-sponsor">Cerebro Solutions, Inc.</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">💵</span>
+                            <span>P1,000.00 cash from
+                                <span class="prize-sponsor">C&amp;E Adaptive Learning Solutions</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">🎁</span>
+                            <span>P3,000.00 worth of Gift Certificates</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="prize-item">
+                    <span class="prize-rank plain">4</span>
+                    <div class="prize-body">
+                        <div class="prize-label">4th Placer</div>
+                        <div class="prize-line">
+                            <span class="prize-icon">⌚</span>
+                            <span><span style="font-weight: bold;">Redmi Watch 5 Active</span> from
+                                <span class="prize-sponsor">Cerebro Solutions, Inc.</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">💵</span>
+                            <span>P1,000.00 cash from
+                                <span class="prize-sponsor">C&amp;E Adaptive Learning Solutions</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">🎁</span>
+                            <span>P2,000.00 worth of Gift Certificates</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="prize-item">
+                    <span class="prize-rank plain">5</span>
+                    <div class="prize-body">
+                        <div class="prize-label">5th Placer</div>
+                        <div class="prize-line">
+                            <span class="prize-icon">💵</span>
+                            <span>P1,000.00 cash from
+                                <span class="prize-sponsor">C&amp;E Adaptive Learning Solutions</span></span>
+                        </div>
+                        <div class="prize-line">
+                            <span class="prize-icon">🎁</span>
+                            <span>P1,000.00 worth of Gift Certificates</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
+        <div class="rewards-visual">
+            <img src="assets/rewards/Glossy Tech Giveaway Gift Box.png" />
+        </div>
+    </div>
 
 
+
+    <div class="section">
+        <h3 class="title">Coaches</h3>
+        <ul class="prize-list">
+            <li class="prize-item">
+                <span class="prize-rank gold">🥇</span>
+                <div class="prize-body">
+                    <div class="prize-label">Champion</div>
+                    <div class="prize-line">
+                        <span class="prize-icon">🎁</span>
+                        <span>P5,000.00 worth of Gift Certificates</span>
+                    </div>
+                </div>
+            </li>
+            <li class="prize-item">
+                <span class="prize-rank silver">🥈</span>
+                <div class="prize-body">
+                    <div class="prize-label">2nd Placer</div>
+                    <div class="prize-line">
+                        <span class="prize-icon">🎁</span>
+                        <span>P4,000.00 worth of Gift Certificates</span>
+                    </div>
+                </div>
+            </li>
+            <li class="prize-item">
+                <span class="prize-rank bronze">🥉</span>
+                <div class="prize-body">
+                    <div class="prize-label">3rd Placer</div>
+                    <div class="prize-line">
+                        <span class="prize-icon">🎁</span>
+                        <span>P3,000.00 worth of Gift Certificates</span>
+                    </div>
+                </div>
+            </li>
+            <li class="prize-item">
+                <span class="prize-rank plain">4</span>
+                <div class="prize-body">
+                    <div class="prize-label">4th Placer</div>
+                    <div class="prize-line">
+                        <span class="prize-icon">🎁</span>
+                        <span>P2,000.00 worth of Gift Certificates</span>
+                    </div>
+                </div>
+            </li>
+            <li class="prize-item">
+                <span class="prize-rank plain">5</span>
+                <div class="prize-body">
+                    <div class="prize-label">5th Placer</div>
+                    <div class="prize-line">
+                        <span class="prize-icon">🎁</span>
+                        <span>P1,000.00 worth of Gift Certificates</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <footer>
