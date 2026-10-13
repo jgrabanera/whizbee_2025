@@ -1,3 +1,15 @@
 https://starbooks.ph/whizbee/2026-1      - Davao
 https://starbooks.ph/whizbee/2026-2      - Mimaropa
 https://starbooks.ph/whizbee/2026-3      - Gensan
+
+
+Action: Add, Edit, Update or Delete
+Category: Category Name
+Tab: Tab Name
+Description: What the user actually did on the CMS
+
+
+ALS users
+
+jgrabanera.starbooks@gmail.com
+!Welcome1
