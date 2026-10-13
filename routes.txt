@@ -8,8 +8,3 @@ Category: Category Name
 Tab: Tab Name
 Description: What the user actually did on the CMS
 
-
-ALS users
-
-jgrabanera.starbooks@gmail.com
-!Welcome1
